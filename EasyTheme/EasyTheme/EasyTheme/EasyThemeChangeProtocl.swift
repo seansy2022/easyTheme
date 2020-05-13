@@ -159,7 +159,7 @@ extension UITextView {
 
 extension UIColor {
     static func ThemeColor(_ name: String) -> UIColor? {
-        guard  let color = EasyThemeManger.shared().themeData?.loadColor(name, themeType: EasyThemeManger.shared().themeType) else {
+        guard  let color = EasyThemeManger.color(name) else {
             return nil
         }
         color.colorName = name
@@ -169,7 +169,7 @@ extension UIColor {
 
 extension UIImage {
     static func ThemeImage(_ name: String) -> UIImage? {
-        guard let image =  EasyThemeManger.shared().themeData?.loadImage(name, themeType: EasyThemeManger.shared().themeType) else {
+        guard let image = EasyThemeManger.image(name) else {
             return nil
         }
         image.imageName = name

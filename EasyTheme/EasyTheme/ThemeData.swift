@@ -15,12 +15,12 @@ struct ThemeData {
 }
 
 extension ThemeData : EasyThemeDataProtocol {
-    func loadImage(_ keyName: String, themeType: String) -> UIImage? {
-        return nil
+    func easyThemeImage(_ keyName: String, themeType: String?) -> UIImage {
+        return UIImage.init()
     }
     
-    func loadColor(_ keyName: String, themeType: String) -> UIColor? {
-        return nil
+    func easyThemeColor(_ keyName: String, themeType: String?) -> UIColor {
+        return UIColor.init()
     }
     
     

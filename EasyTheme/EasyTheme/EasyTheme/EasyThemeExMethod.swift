@@ -7,8 +7,9 @@
 //
 
 import UIKit
-var easyTheme_once: Bool = false
+
 extension UIView {
+        private static var easyTheme_once: Bool = false
         static func initializeMethod() {
         guard easyTheme_once == false else{ return }
         easyTheme_once = true

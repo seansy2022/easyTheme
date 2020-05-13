@@ -17,7 +17,7 @@
 		14A83976246A971600BDA179 /* EasyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A83972246A971600BDA179 /* EasyTheme.swift */; };
 		14A83977246A971600BDA179 /* EasyThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A83973246A971600BDA179 /* EasyThemeData.swift */; };
 		14A83978246A971600BDA179 /* EasyThemeExMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A83974246A971600BDA179 /* EasyThemeExMethod.swift */; };
-		14A83979246A971600BDA179 /* EasyThemeProtocl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A83975246A971600BDA179 /* EasyThemeProtocl.swift */; };
+		14A83979246A971600BDA179 /* EasyThemeChangeProtocl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A83975246A971600BDA179 /* EasyThemeChangeProtocl.swift */; };
 		14A8397B246A999D00BDA179 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A8397A246A999D00BDA179 /* ThemeData.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		14A83972246A971600BDA179 /* EasyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTheme.swift; sourceTree = "<group>"; };
 		14A83973246A971600BDA179 /* EasyThemeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyThemeData.swift; sourceTree = "<group>"; };
 		14A83974246A971600BDA179 /* EasyThemeExMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyThemeExMethod.swift; sourceTree = "<group>"; };
-		14A83975246A971600BDA179 /* EasyThemeProtocl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyThemeProtocl.swift; sourceTree = "<group>"; };
+		14A83975246A971600BDA179 /* EasyThemeChangeProtocl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyThemeChangeProtocl.swift; sourceTree = "<group>"; };
 		14A8397A246A999D00BDA179 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,7 @@
 				14A83972246A971600BDA179 /* EasyTheme.swift */,
 				14A83973246A971600BDA179 /* EasyThemeData.swift */,
 				14A83974246A971600BDA179 /* EasyThemeExMethod.swift */,
-				14A83975246A971600BDA179 /* EasyThemeProtocl.swift */,
+				14A83975246A971600BDA179 /* EasyThemeChangeProtocl.swift */,
 			);
 			path = EasyTheme;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 				14A83978246A971600BDA179 /* EasyThemeExMethod.swift in Sources */,
 				14A83977246A971600BDA179 /* EasyThemeData.swift in Sources */,
 				14A83976246A971600BDA179 /* EasyTheme.swift in Sources */,
-				14A83979246A971600BDA179 /* EasyThemeProtocl.swift in Sources */,
+				14A83979246A971600BDA179 /* EasyThemeChangeProtocl.swift in Sources */,
 				14A8397B246A999D00BDA179 /* ThemeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

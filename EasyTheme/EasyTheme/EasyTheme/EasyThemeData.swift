@@ -8,7 +8,19 @@
 
 import UIKit
 public protocol EasyThemeDataProtocol {
-    func loadImage(_ keyName: String, themeType: String) -> UIImage?
+    func easyThemeCanLoadImage(_ keyName: String, themeType: String?) -> Bool
+    func easyThemeImage(_ keyName: String, themeType: String?) -> UIImage
     
-    func loadColor(_ keyName: String, themeType: String) -> UIColor?
+    func easyThemeCanLoadColor(_ keyName: String, themeType: String?) -> Bool
+    func easyThemeColor(_ keyName: String, themeType: String?) -> UIColor
+}
+
+extension EasyThemeDataProtocol {
+    func easyThemeCanLoadImage(_ keyName: String, themeType: String?) -> Bool {
+        return true
+    }
+    
+    func easyThemeCanLoadColor(_ keyName: String, themeType: String?) -> Bool {
+        return true
+    }
 }
