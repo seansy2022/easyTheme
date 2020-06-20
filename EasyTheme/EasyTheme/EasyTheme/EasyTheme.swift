@@ -79,6 +79,7 @@ public class EasyThemeManger {
         DispatchQueue.main.async {
             let weakArray = self.weakTable.allObjects
             for view in weakArray {
+                self.changeColorAndImg(view)
                 self.changeViewTheme(view)
             }
         }
@@ -86,11 +87,15 @@ public class EasyThemeManger {
     
     private func changeViewTheme(_ view: UIView) {
         for subView in view.subviews {
-            subView.checkThemeColor()
-            subView.checkThemeImage()
-            subView.checkThemeOther()
+            changeColorAndImg(subView)
             changeViewTheme(subView)
         }
+    }
+    
+    private func changeColorAndImg(_ view: UIView){
+        view.checkThemeColor()
+          view.checkThemeImage()
+          view.checkThemeOther()
     }
 }
 
@@ -119,7 +124,7 @@ extension EasyThemeManger {
 }
 
 ///addTag
-var KCOLORNAMEKEY: ()
+var KCOLORNAMEKEY:Void?
 extension UIColor {
     var colorName: String? {
         get {
@@ -132,7 +137,7 @@ extension UIColor {
     }
 }
 
-var KIMAGENAMEKEY: ()
+var KIMAGENAMEKEY: Void?
 extension UIImage {
     var imageName: String? {
         get {
