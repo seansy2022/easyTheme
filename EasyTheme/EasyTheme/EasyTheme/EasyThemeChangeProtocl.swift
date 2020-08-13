@@ -17,12 +17,29 @@ protocol EasyThemeChangeProtocl {
 ///实现了 backgroundColor
 extension UIView : EasyThemeChangeProtocl {
     @objc func checkThemeColor() {
-        guard let colorName = self.backgroundColor?.colorName else {
-            return
-        }
-        
-        self.backgroundColor = UIColor.ThemeColor(colorName)
+        checkBackgrounColor()
+        checkTintColor()
     }
+    
+    
+    func checkBackgrounColor() {
+        guard let colorName = self.backgroundColorName else {
+                   return
+               }
+               
+               self.backgroundColor = UIColor.ThemeColor(colorName)
+    }
+    
+    func checkTintColor() {
+
+        guard let colorName = self.tintColorName, let color = UIColor.ThemeColor(colorName) else {
+                   return
+               }
+               
+        self.tintColor = color
+    }
+    
+    
     
     @objc func checkThemeImage() {
     }
@@ -154,6 +171,41 @@ extension UITextView {
         }
         self.textColor = UIColor.ThemeColor(textColorName)
     }
+}
+
+
+extension UINavigationBar {
+    override func checkThemeColor() {
+        super.checkThemeColor()
+   checkBarTintColor()
+    }
+    
+    func checkTin() {
+          guard let colorName = self.backgroundColorName else {
+                     return
+                 }
+                 
+                 self.backgroundColor = UIColor.ThemeColor(colorName)
+      }
+      
+      func checkBarTintColor() {
+          guard let colorName = self.barTintColorName, let color = UIColor.ThemeColor(colorName) else {
+                     return
+                 }
+
+          self.barTintColor = color
+      }
+}
+
+extension UITabBar {
+        @objc override func checkThemeImage() {
+            super.checkThemeImage()
+            guard let imageName = self.backgroundImageName else {
+                return
+            }
+            
+            self.backgroundImage = UIImage.ThemeImage(imageName)
+        }
 }
 
 

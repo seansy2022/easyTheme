@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIView {
-        private static var easyTheme_once: Bool = false
-        static func initializeMethod() {
+    private static var easyTheme_once: Bool = false
+    static func initializeMethod() {
         guard easyTheme_once == false else{ return }
         easyTheme_once = true
         let originalSelector = #selector(UIView.didMoveToSuperview)
@@ -39,3 +39,110 @@ extension UIView : UIViewExchangeDidMoveToSuperview {
         EasyThemeManger.addNoticeView(view: self)
     }
 }
+
+
+
+extension UIView {
+    
+    var backgroundColor: UIColor?{
+        set{
+            self.setValue(newValue, forKey: "backgroundColor")
+            self.backgroundColorName =  newValue?.colorName
+        }
+        get{
+            return self.value(forKeyPath: "backgroundColor") as? UIColor
+        }
+    }
+    
+    var tintColor :UIColor {
+        set{
+            self.setValue(newValue, forKey: "tintColor")
+            self.tintColorName = newValue.colorName;
+        }
+        get{
+            return self.value(forKeyPath: "tintColor") as! UIColor
+        }
+    }
+}
+
+extension UINavigationBar {
+    var barTintColor:UIColor? {
+        set{
+            self.setValue(newValue, forKey: "barTintColor")
+            self.barTintColorName = newValue?.colorName
+        }
+        get{
+            return self.value(forKeyPath: "barTintColor") as? UIColor
+        }
+    }
+}
+
+
+var kTabBarbackgroundImage :Void?
+extension UITabBar {
+    var backgroundImage: UIImage? {
+        
+        set{
+            self.setValue(newValue, forKey: "backgroundImage")
+            self.backgroundImageName = newValue?.imageName
+        }
+        
+        get{
+            return self.value(forKeyPath: "backgroundImage") as? UIImage
+        }
+    }
+    
+    var backgroundImageName: String? {
+        get {
+            return objc_getAssociatedObject(self, &kTabBarbackgroundImage) as? String
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &kTabBarbackgroundImage, newValue, .OBJC_ASSOCIATION_COPY)
+        }
+    }
+}
+
+
+
+///addTag
+var KbackgroundColor: Void?
+var KtintColor: Void?
+var KbarTintColor: Void?
+extension UIView {
+    var backgroundColorName: String? {
+        get {
+            return objc_getAssociatedObject(self, &KbackgroundColor) as? String
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &KbackgroundColor, newValue, .OBJC_ASSOCIATION_COPY)
+        }
+    }
+    
+    var tintColorName: String? {
+        get {
+            return objc_getAssociatedObject(self, &KtintColor) as? String
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &KtintColor, newValue, .OBJC_ASSOCIATION_COPY)
+        }
+    }
+    
+}
+
+
+extension UINavigationBar {
+    var barTintColorName: String? {
+        get {
+            return objc_getAssociatedObject(self, &KbarTintColor) as? String
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &KbarTintColor, newValue, .OBJC_ASSOCIATION_COPY)
+        }
+    }
+}
+
+

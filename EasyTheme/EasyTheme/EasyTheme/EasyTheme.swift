@@ -80,15 +80,7 @@ public class EasyThemeManger {
             let weakArray = self.weakTable.allObjects
             for view in weakArray {
                 self.changeColorAndImg(view)
-                self.changeViewTheme(view)
             }
-        }
-    }
-    
-    private func changeViewTheme(_ view: UIView) {
-        for subView in view.subviews {
-            changeColorAndImg(subView)
-            changeViewTheme(subView)
         }
     }
     

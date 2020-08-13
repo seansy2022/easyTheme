@@ -24,3 +24,32 @@ extension EasyThemeDataProtocol {
         return true
     }
 }
+
+
+class EasyThemeData: EasyThemeDataProtocol {
+    func easyThemeImage(_ keyName: String, themeType: String?) -> UIImage {
+      
+           if(themeType == "1") {
+            let a =   UIImage.init(named: "main_tabbar_bg_dark")
+                          return a  ?? UIImage.init()
+        
+            
+        }
+              let a =   UIImage.init(named: "Subtract")
+          //              a.imageName = "1"
+                      return a ?? UIImage.init()
+    }
+    
+    func easyThemeColor(_ keyName: String, themeType: String?) -> UIColor {
+              if(themeType == "1") {
+              let a = UIColor.red
+//                a.colorName = "1"
+                return a;
+          }
+            let a = UIColor.green
+                      a.colorName = "1"
+                      return a;
+    }
+    
+    
+}
